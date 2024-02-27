@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;   
+    align-self: center; 
+    background: url(background1.jpg) no-repeat center fixed;
+    height: 1024px;
+    background-size: cover;
+}
+.projectslist{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    border: 5px solid  black;
+    border-radius: 20px;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    width: 400px;
+    height: 400px;
+    margin-top: 200px;
+}
+.head{
+    text-align: center;
+    position: relative;
+    color: yellowgreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+}
+.lista{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: green;
+    display: inline;
+    position:relative;
+}

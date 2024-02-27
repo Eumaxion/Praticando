@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HOME</title>
+    <link rel="stylesheet" href="{% static 'home/style.css'%}">
+</head>
+<body>
+    <div class="container">
+        <div class="projectslist">
+            <div class="head">
+            <h1>Mini Projects List</h1>
+            </div>
+            <div class="lista">
+                <ol>
+                    <li><a href="{% url 'gerador:index' %}">Gerador de Apostas</a></li>
+                    <li>Controle de Horas</li>
+                    <li>Rank de Filmes</li>
+                    <li>Encurtador de URLs</li>
+                    <li>Sistema de Autenticação</li>
+                </ol>    
+            </div>
+        </div>
+    </div>
+</body>
+</html>

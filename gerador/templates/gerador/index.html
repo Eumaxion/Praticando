@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gerador</title>
+    <link rel="stylesheet" href="{% static 'gerador/style.css'%}">
+    <script src="{% static 'gerador/gerador.js'%}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador</h1>
+        <div class="box-numbers">
+            <div class="numbers">
+                {% for n in number %}
+                <h5 class="number"> {{n}} </h5>
+                {% endfor %}
+            </div>
+            <button onclick="refresh()">refresh</button>
+        </div>
+        <h5><a href="{%url 'home:index'%}">back</a></h5>
+    </div>
+</body>
+</html>
