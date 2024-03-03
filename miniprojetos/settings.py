@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'home',
     'gerador',
+    'controle_horas',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
