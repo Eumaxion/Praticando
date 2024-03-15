@@ -4,20 +4,38 @@
 <head>
     <title>Gerador</title>
     <link rel="stylesheet" href="{% static 'gerador/style.css'%}">
-    <script src="{% static 'gerador/gerador.js'%}"></script>
 </head>
 <body>
     <div class="container">
         <h1>Gerador</h1>
         <div class="box-numbers">
             <div class="numbers">
-                {% for n in number %}
-                <h5 class="number"> {{n}} </h5>
-                {% endfor %}
+                <h4>LUCKY</h4>
+                <h4>6 numeros da sorte gerados aleatóriamente!!!</h4>
             </div>
-            <button onclick="refresh()">refresh</button>
+            <div class="button">
+                <button id="refresh">Gerar</button>
+            </div>
         </div>
-        <h5><a href="{%url 'home:index'%}">back</a></h5>
+        <h5><a href="{%url 'home:index'%}">VOLTAR</a></h5>
     </div>
+    <script>
+    let caixa = document.querySelector(".numbers")
+        document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('refresh').addEventListener('click', function(){
+        caixa.innerHTML = ""
+        caixa.style.flexDirection = "row";
+    fetch("{% url 'gerador:atualizar' %}")
+    .then(response => response.json())
+    .then(data => 
+        data.numeros.forEach(numero => {
+        let h5 = document.createElement("h5")
+        h5.classList.add("number");
+        h5.innerHTML = numero
+        caixa.appendChild(h5);
+        })); 
+    })
+    });
+    </script>
 </body>
 </html>
